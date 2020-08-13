@@ -10,7 +10,7 @@
     </parent>
     <groupId>systems.abacus</groupId>
     <artifactId>spring-boot-jwt-custom</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>Spring Boot JWT Custom</name>
     <description>Demo project for Spring Boot</description>
 
