@@ -7,8 +7,8 @@ import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.filter.OncePerRequestFilter
-import systems.abacus.springbootjwtcustom.config.JwtConfig
 import systems.abacus.springbootjwtcustom.beans.JwtUtils
+import systems.abacus.springbootjwtcustom.config.JwtConfig
 import systems.abacus.springbootjwtcustom.security.LocalPrincipal
 import javax.servlet.FilterChain
 import javax.servlet.http.HttpServletRequest
@@ -23,7 +23,7 @@ class JwtTokenAuthenticationFilter @Autowired constructor(private val config: Jw
             return
         }
 
-        val token = header.replace(config.prefix, "").trim()
+        val token = header.replace(config.prefix!!, "").trim()
 
         try {
             val claims: Claims = utils.parseToken(token)
