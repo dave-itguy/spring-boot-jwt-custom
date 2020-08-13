@@ -4,10 +4,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties("jwt")
 class JwtConfig {
-    val audience: String? = null
-    val secret: String? = null
-    val expiration: Long = 0L
-    val issuer: String? = null
-    val prefix: String? = null
-    val header: String? = null
+    var audience: String? = null
+    var secret: String? = null
+    var expiration: Long = 0L
+    var issuer: String? = null
+    var prefix: String? = null
+    var header: String? = null
 }
